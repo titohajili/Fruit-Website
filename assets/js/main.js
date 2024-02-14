@@ -1,19 +1,28 @@
 /*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById('nav-menu')
+const navToggle = document.getElementById('nav-toggle')
+const navClose = document.getElementById('nav-close')
 
+if(navToggle){
+    navToggle.addEventListener('click', () =>{
+        navMenu.classList.add('show-menu')
+    })
+}
 
-/*=============== REMOVE MENU MOBILE ===============*/
+if(navClose){
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu')
+    })
+}
 
+// Remove menu mobile/////
 
-/*=============== SHADOW HEADER ===============*/
+const navLink = document.querySelectorAll('.nav__link');
 
+const linkAction = () => {
+    const navMenu = document.getElementById('nav-menu');
 
-/*=============== SHOW SCROLL UP ===============*/ 
+    navMenu.classList.remove('show-menu')
+}
 
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
-
-/*=============== DARK LIGHT THEME ===============*/ 
-
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+navLink.forEach(n => n.addEventListener('click', linkAction))
