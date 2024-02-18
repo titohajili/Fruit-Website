@@ -679,7 +679,7 @@ img {
 }
 ::-webkit-scrollbar-thumb:hover{
   background-color: hsl(0, 0%, 55%);
-}
+} 
 
 .scrollup{
   position: fixed;
@@ -695,11 +695,60 @@ img {
   z-index: var(--z-tooltip);
   transition:  bottom .4s, transform .4s, background-color .4s;
 }
-
+ 
 .scrollup:hover{
   transform: translateY(-.5rem);
 }
 
 .show-scroll{
   bottom: 3rem;
+}
+
+/* active link */
+
+.active-link{
+  color: var(--first-color);
+}
+
+/* ===THEME=== */
+.nav__buttons{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.change-theme{
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+body.dark-theme{
+  --first-color: hsl(140, 30%, 45%);
+  --first-color-alt: hsl(140, 30%, 40%);
+  --title-color: hsl(140, 4%, 90%);
+  --body-color: hsl(0, 0%, 10%);
+  --container-color: hsl(0, 0%, 14%);
+  --shadow-img: drop-shadow(0 8px 12px hsla(0, 0%, 0%, .6));
+  --filter-img: initial;
+
+}
+
+.dark-theme :is(.shadow-header, .nav__menu, .scrollup){
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, .3);
+}
+
+.dark-theme .scrollup{
+  background-color: var(--container-color);
+}
+
+.dark-theme::-webkit-scrollbar{
+  background-color: hsl(0, 0%, 15%);
+}
+.dark-theme::-webkit-scrollbar-thumb{
+  background-color: hsl(0, 0%, 31%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover{
+  background-color: hsl(0, 0%, 41%);
 }
