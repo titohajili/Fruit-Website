@@ -1065,4 +1065,8 @@ body.dark-theme{
     left: 20%;
     bottom: -4rem;
   }
+
+  .scrollup{
+    right: 3rem;
+  }
 }
